@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  <style type="text/css">
+  body { border: 1px dashed rgb(0, 0, 0);
+    padding: 4px 10px 4px 5px;
+    font-family: Georgia,serif;
+    text-align: justify;
+    width: 780px;
+    display: block;
+    background-color: #FFFFFF;
+    }
+
+  textarea { border-style: groove;
+    font-family: Lucida Console,serif;
+    color: rgb(51, 51, 255);
+    background-color: rgb(204, 204, 204);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    }
+
+  li { margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    list-style-type: decimal;
+    }
+
+
+  .style1 {
+	color: #990000;
+	font-weight: bold;
+}
+  </style>
+  <title>How to Use Fox_captcha</title>
+
+
+</head>
+<body>
+
+<h1 align="justify">Introduction Version 3.0</h1>
+
+<p align="justify">Welcome to Fox_captcha class. The class is meant by creating
+Captcha verification to secure your forms from floods and spamers. The
+class is easy to use. It is just two steps to do in the form page and
+another one step in the form's action page to get Captcha working (<span style="font-style: italic;">of course after the ordinary
+class's object initiation steps</span>).</p>
+<p align="justify">The version 2 of Fox_captcha that has modifications on the way by which the reloading of captcha image is carried out. The modification was made due to the problems related with the image refreshment regarded in the <a href="http://www.phpclasses.org/discuss/package/3949/thread/1">discussion forum</a> of Fox_captcha and very much thanks to <a href="http://www.phpclasses.org/browse/author/432415.html"><strong>Michele Castellucci</strong></a>. I did not use AJAX, It is only another dynamic image file and some javascript code to allow the reload functionality working properly.</p>
+<p align="justify">version 2.5 is released and it has one bug fix and one new feature:
+<ul>
+<li><b> The bug fixed:</b> It is a bug related with number of lines rendered via $lines_amount property. By default, it should renders 5 lines, when you defined a value to this property it should generates exact number of lines as defined.</li>
+<li><b> The new feature:</b> While loading the new Captcha Image, a loading gif indicator will be rendered till the new Captcha Image is completely downloaded. The file name of the loading indicator gif must be " fox_captcha_image_loading.gif " and it must be available at the same directory of $class_dir property.
+<p><i>Hint:</i> You could able to use a free online service called <a href="http://www.chimply.com" target="_blank">Chimply</a> to generate the laoding gif indicator. We suggest to set the indicator image height to be equals to the $img_height property which it was set during the object initiation.</p> 
+</li>
+</ul>
+</p>
+<p align="justify">Currently version 3 is released and it has two changes:</p>
+<ul>
+  <li>
+    <b>The image becomes totally dynamic:</b> it means that you don't have to make special writing permission to the directory that handles the class. i.e you will not see fox_captcha_image.jpg any more.    
+  </li>
+  <li>
+    <b>the $class_dir property is renamed:</b> We found that the name of the property is not descriptive, so we changed it to <b>$image_dir</b>. It will catch the directory path in-which both fox_captcha_image.php and fox_captcha_image_loading.gif are resident. <span style="color:red; font-weight: bold">So you MUST change this property name, if you had used it before, to use version 3 correctly</span>
+  </li>
+</ul>
+<h1 align="justify">Get started!</h1>
+
+<div align="justify">
+  <ol>
+    
+    <li>Place the file named Fox_captcha.php in any directory of
+      your website. We will suppose that it will be in the same directory of the php file that include it, then place the images folder in any location on your server relatively accessible to the including file of Fox_captcha.php.
+    
+    </li>
+    <li>Open the PHP page that you want to add captcha to a form
+      inside it.</li>
+    <li>Make sure that session is started in this page. Fox_captcha
+      will not work without session and it will die the rest of the script if
+      it fails to find session.</li>
+    <li>In any place of &nbsp;the page type the following PHP
+      code: <br>
+      
+    </li> 
+
+
+<li><div style="margin-left: 40px;">
+  <div align="justify">
+    <textarea cols="60" rows="12" name="cod">&lt;?php
+require_once('Fox_captcha.php');
+$img = new Fox_captcha(120,30,5);
+$img->image_dir = 'images/'; // This property member is required to perform creating and reloading the image correctly in the case of being images in different directory than the page required it. DO NOT forget the trailing slash!
+//If you would like change the reload text
+$img->en_reload = "Reload The Image"; //enter any text you want or even Image
+?&gt;</textarea>
+  </div>
+</div>
+
+  </li>
+
+  <li>
+    <div align="justify">You may notice that the class has a constructor which is
+      used to set initially three values by the three parameters</div>
+  </li>
+
+  <div align="justify">
+    
+      <ol>
+      <li>The width of the image</li>
+      <li>The height of the image</li>
+      <li>The number of &nbsp;letters should be displayed over
+        the image. This number should not be more than 9.</li>
+        </ol>
+      <li><span class="style1">Very Important Notice:</span> If the Fox_captcha images in different directory than the page that required it, It is very important to use the property member <em>image_dir</em> to allow proper reloading of the cpatcha image. If the page and the images in the same directory, so it is not important to assign a value to it or such using it at all.</li>
+    
+  </div>
+  <li>
+    <div align="justify">Create a text field, <span style="font-style: italic;">if
+      it is not already exist</span>, that will carry the captcha code,
+      in your form. In the included example (<em>index.php</em>) the <em>name</em> attribute of the  text field is named <em>code</em>.</div>
+  </li>
+
+  <li>
+    <div align="justify">Now decide where over the page you want to place the image
+      of captcha and there you&nbsp;should type the following line of
+      code:</div>
+  </li>
+
+  <div style="margin-left: 40px;">
+    <div align="justify">
+      <textarea cols="60" rows="5" name="cod">&lt;?php $img-&gt;make_it();?></textarea>
+    </div>
+  </div>
+
+  <li>
+    <div align="justify">In the other page which the form will submit its data,
+      check step 3 again. Repeat the code In step 4. <span style="font-weight: bold;">As an advice</span>, we
+      don't
+      need full image size and number of letters at this step. However, since
+      they are required parameters, you must place their values and for
+      keeping resources you may set them as 1,1,1</div>
+  </li>
+
+  <div style="margin-left: 40px;">
+    <div align="justify">
+      <textarea cols="60" rows="5" name="cod">&lt;?php
+require_once('Fox_captcha.php');
+$img = new Fox_captcha(1,1,1);
+?&gt;</textarea>
+    </div>
+  </div>
+
+  <li>
+    <div align="justify">In any part of your code when you decide to check the
+      captcha code value, just use the method <span style="color: rgb(51, 51, 255);">test($string) <span style="color: rgb(0, 0, 0);">. This may be shown as
+        following:</span></span></div>
+  </li>
+
+  <div style="margin-left: 40px;">
+    <div align="justify">
+      <textarea cols="60" rows="14" name="cod">&lt;?php
+if ($img-&gt;test($_POST['code'])){
+//The code is correct.
+echo "Correct code";
+}
+else{
+//The code is wrong
+echo "Wrong code"
+}
+?&gt;</textarea>
+    </div>
+  </div>
+
+  <li>
+    <div align="justify">In the previous example we supposed that you named the text
+      field as <span style="font-style: italic;">code</span>
+      and you used <span style="font-style: italic;">POST</span>
+      method in submitting the form</div>
+  </li>
+</ol>
+
+<p align="justify">I hope this is useful. For further help, please use the
+<a href="http://www.phpclasses.org/discuss/package/3949/">support forum</a> of Fox_captcha.</p>
+
+<div align="justify">
+  <address>
+  Best Regards,
+</address>
+  <address>
+    <a href="http://2index.net">Said Bakr</a>.
+</address>
+</div>
+</body>
+</html>
