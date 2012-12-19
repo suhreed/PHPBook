@@ -1,1 +1,0 @@
-<img src="imagecaptcha.php" align="left"  border="1" />
