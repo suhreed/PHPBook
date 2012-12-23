@@ -1,6 +1,7 @@
 #Apache-MySQL-PHP Shohojpath
 #এপাচি-মাইএসকিউএল-পিএইচপি সহজপাঠ
 
+![Book Cover](https://github.com/suhreed/PHPBook/tree/gh-pages/codes/php-book-cover.png) 
 This is the code repository for my book on PHP - **Apache-MySQL-PHP Shohojpath** written in Bangla. All codes used in the books will be available here.
 
 ##Book Contents
