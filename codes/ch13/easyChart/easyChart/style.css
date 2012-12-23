@@ -1,0 +1,56 @@
+/*
+ * EASY CHART V1.0 CSS configure file 
+ * -------------------------------------------
+ *
+ * This source file is subject RRSOFT EASY CHART.
+ *
+ * @link       http://www.rrsoft.cz/
+ * @author     Radek Roza <radek.roza@rrsoft.cz>
+ * @copyright  Copyright (c) 2006 Radek Roza RRSOFT
+ * @license    RRSOFT GNU GENERAL PRIVATE LICENSE
+ * @version    1.0 for PHP4 & PHP5 $Date: 2006-11-03 
+ */
+
+ .easyChart table {
+    font-family : verdana, arial, sans-serif;
+    color: #000;
+    font-size : 10px;
+    text-align : center;
+    border:  0;
+    border-spacing: 0;
+    padding: 0;
+    background-color : white;
+}
+
+.easyChart_title {
+    font-size : 12px;
+    font-weight : normal;
+    height: 64px;
+    text-align : center;
+    color: #000;
+    background-color : white;
+}
+
+.easyChart_footer, a{
+    font-size : 10px;
+    height: 64px;
+    text-align : center;
+    color: #000;
+    background-color : white;
+}
+
+.easyChart_label_top {
+    font-size : 8px;
+    text-align : center;
+}
+
+.easyChart_label_middle {
+    color: #000;
+	background-color : white;
+    text-align : center;
+}
+
+.easyChart_label_bottom {
+    font-size : 8px;
+    text-align : center;
+}

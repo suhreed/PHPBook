@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<articles xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<item>
+		<title>Just another component creator?</title>
+		<link>http://www.suhreedsarkar.com/2012/07/just-another-component-creator/</link>
+		<pubDate>Sun, 15 Jul 2012 15:21:51 +0000</pubDate>
+		<dc:creator>Suhreed Sarkar</dc:creator>
+		<description><![CDATA[Are you a Joomla! developer? If Yes, you know how repetitive copying and pasting it is. When you are developing a component following Model-View-Controller (MVC) design pattern, you need to do the same thing many times in Joomla!. Often you need to copy and paste the codes. While doing work on some components, I was [...]]]></description>
+	</item>
+	<item>
+		<title>How did I connect my Sony BRAVIA to Internet without buying the dongle from Sony</title>
+		<link>http://www.suhreedsarkar.com/2012/07/how-did-i-connect-my-sony-bravia-to-internet-without-buying-the-dongle-from-sony/</link>
+		<pubDate>Sat, 14 Jul 2012 08:31:10 +0000</pubDate>
+		<dc:creator>Suhreed Sarkar</dc:creator>
+		<description><![CDATA[Recently I bought a Sony Bravia 32&#8243; LCD TV. It supports connectivity to Internet over the wi-fi and ethernet cable. I was happy seeing its specifucations and it was written &#8216;internet ready&#8217;. Later I found the fine print &#8211; I have to buy a dongle from Sony to get the Wi-Fi working. The shop at [...]]]></description>
+	</item>
+	<item>
+		<title>How to Root Android on Samsung Galaxy Tab</title>
+		<link>http://www.suhreedsarkar.com/2011/04/how-to-root-android-on-samsung-galaxy-tab/</link>
+		<pubDate>Sun, 24 Apr 2011 09:21:13 +0000</pubDate>
+		<dc:creator>Suhreed Sarkar</dc:creator>
+		<description><![CDATA[Yesterday I have rooted by Samsung Galaxy Tab. I have tried Apple iPad earlier and after a week jail-broken that, because you cant do anything without Jailbreaking in iPad (att least from Bangladesh). After buying Android based Galaxy Tab, I was using it without rooting (having root access, or &#8216;root&#8217; user&#8217;s permission. But I found [...]]]></description>
+	</item>
+<item><title>XML in PHP5</title></item><item><title>How to create Captcha in PHP5?</title></item><item><title>Generating PDFs in PHP5</title></item></articles>
