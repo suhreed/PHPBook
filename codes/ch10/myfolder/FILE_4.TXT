@@ -1,2 +1,0 @@
-This is test data on myfile.txt. If you can see it, you are lucky and a good PHP Programmer.
-Can you see me?
